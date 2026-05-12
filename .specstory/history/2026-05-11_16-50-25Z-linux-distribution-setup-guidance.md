@@ -571,7 +571,36 @@ _**Agent (premium)**_
 
 <details><summary>Tool use: **edit_file_v2** • Edit file: /Users/karenvelasquez/Projects/Linux/scripts/update-current-status.sh</summary>
 
-Status: **loading**
+</details>
+
+</tool-use>
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (premium)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2">
+<details><summary>Tool use: **run_terminal_command_v2** • Run command: chmod +x scripts/update-current-status.sh</summary>
+
+```bash
+chmod +x scripts/update-current-status.sh
+```
+</details>
+</tool-use>
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (premium)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: /Users/karenvelasquez/Projects/Linux/memory/README.md</summary>
 
 </details>
 
@@ -581,3 +610,87 @@ Status: **loading**
 <summary>Tool use: **edit_file_v2**</summary>
 
 </details></tool-use>
+
+_**Agent (premium)**_
+
+Done — added the interactive status updater.
+
+### Added
+- `scripts/update-current-status.sh`
+  - Prompts you for key session fields
+  - Rewrites `memory/current-status.md` in a clean consistent template
+  - Adds a `_Last updated: ..._` timestamp
+
+### Usage
+From workspace root:
+
+- `./scripts/update-current-status.sh`
+
+I also updated `memory/README.md` to include this command.
+
+If you want next, I can add a third helper that runs both scripts in sequence (`new session note` + `update status`) as a single command like `./scripts/start-session.sh`.
+
+---
+
+_**User**_
+
+Don't commit the .specstory folder
+
+---
+
+_**Agent (premium)**_
+
+Understood — I’ll make this persistent by adding `.specstory/` to the repo ignore rules so it won’t be committed accidentally. I’ll check existing ignore files first to avoid duplicates.
+
+_**Agent (premium)**_
+
+<tool-use data-tool-type="search" data-tool-name="glob_file_search">
+<details>
+<summary>Tool use: **glob_file_search** • Searched codebase "" • **0** results in **1** directory</summary>
+
+Directory: **/Users/karenvelasquez/Projects/Linux** (0 files)
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
+<summary>Tool use: **glob_file_search**</summary>
+
+</details></tool-use>
+
+_**Agent (premium)**_
+
+<tool-use data-tool-type="search" data-tool-name="glob_file_search">
+<details>
+<summary>Tool use: **glob_file_search** • Searched codebase "" • **0** results in **1** directory</summary>
+
+Directory: **/Users/karenvelasquez/Projects/Linux** (0 files)
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
+<summary>Tool use: **glob_file_search**</summary>
+
+</details></tool-use>
+
+_**Agent (premium)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: /Users/karenvelasquez/Projects/Linux/.gitignore</summary>
+
+</details>
+
+</tool-use>
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (premium)**_
+
+Added `.specstory/` to `.gitignore` at the workspace root, so Git won’t include that folder in future commits.
+
+If you already have `.specstory` files tracked from earlier, I can also give you the one-time command to untrack them without deleting local files.
